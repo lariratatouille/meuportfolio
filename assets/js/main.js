@@ -289,8 +289,18 @@ document.getElementById("sendBtn").addEventListener("click", function () {
 
   // Se os campos estiverem preenchidos, envia a mensagem pelo WhatsApp
   if (isValid) {
+    let nome = encodeURIComponent(document.getElementById("name-field").value);
+    let email = encodeURIComponent(document.getElementById("email-field").value);
+    let mensagem = encodeURIComponent(document.getElementById("message-field").value);
+
     let texto = `Oi, meu nome é ${nome}%0AEmail: ${email}%0AMensagem: ${mensagem}`;
-    let url = `https://wa.me/?text=${texto}`;
+    let url = `https://wa.me/5519998683124?text=${texto}`;
+    
     window.open(url, "_blank");
-  }
+}
+
+
 });
+
+
+
